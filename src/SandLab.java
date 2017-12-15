@@ -116,19 +116,41 @@ public class SandLab {
               break;
          case WATER:
              switch (wp){
-                 case 0:
+                 case 0: // LEFT
                      if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
-
-                         if (true){
-                             grid[yCord][xCord] = WATER;
-                             grid[yCord + 1][xCord] = WATER;
-                         }
 
                          grid[yCord][xCord] = EMPTY;
                          grid[yCord][xCord - 1] = WATER;
                      }
                      else{
                         break;
+                     }
+                     break;
+                 case 1: // RIGHT
+                     if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
+
+                         grid[yCord][xCord] = EMPTY;
+                         grid[yCord][xCord + 1] = WATER;
+                     }
+                     else{
+                         break;
+                     }
+                     break;
+
+                 case 2: // DOWN
+                     if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
+
+                         if (grid[yCord + 1][xCord] == WATER){
+                             grid[yCord][xCord] = WATER;
+                             grid[yCord + 1][xCord] = WATER;
+                         }
+                         else{
+                             grid[yCord][xCord] = EMPTY;
+                             grid[yCord + 1][xCord] = WATER;
+                         }
+                     }
+                     else{
+                         break;
                      }
                      break;
 
