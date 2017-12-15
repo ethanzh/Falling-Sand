@@ -6,10 +6,9 @@ import javax.swing.*;
 import javax.swing.event.*;
 
 public class SandDisplay extends JComponent implements MouseListener,
-  MouseMotionListener, ActionListener, ChangeListener
-{
-  private Image image;
-  private int cellSize;
+  MouseMotionListener, ActionListener, ChangeListener {
+  private static Image image;
+  private static  int cellSize;
   private JFrame frame;
   private int tool;
   private int numRows;
@@ -19,8 +18,7 @@ public class SandDisplay extends JComponent implements MouseListener,
   private JSlider slider;
   private int speed;
   
-  public SandDisplay(String title, int numRows, int numCols, String[] buttonNames)
-  {
+  public SandDisplay(String title, int numRows, int numCols, String[] buttonNames) {
     this.numRows = numRows;
     this.numCols = numCols;
     tool = 1;
@@ -50,8 +48,7 @@ public class SandDisplay extends JComponent implements MouseListener,
     
     buttons = new JButton[buttonNames.length];
     
-    for (int i = 0; i < buttons.length; i++)
-    {
+    for (int i = 0; i < buttons.length; i++) {
       buttons[i] = new JButton(buttonNames[i]);
       buttons[i].setActionCommand("" + i);
       buttons[i].addActionListener(this);
@@ -76,13 +73,11 @@ public class SandDisplay extends JComponent implements MouseListener,
     frame.setVisible(true);
   }
   
-  public void paintComponent(Graphics g)
-  {
+  public void paintComponent(Graphics g) {
     g.drawImage(image, 0, 0, null);
   }
   
-  public void pause(int milliseconds)
-  {
+  public void pause(int milliseconds) {
     try
     {
       Thread.sleep(milliseconds);
@@ -103,7 +98,7 @@ public class SandDisplay extends JComponent implements MouseListener,
     return tool;
   }
   
-  public void setColor(int row, int col, Color color)
+  public static void setColor(int row, int col, Color color)
   {
     Graphics g = image.getGraphics();
     g.setColor(color);
