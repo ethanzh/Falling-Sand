@@ -102,7 +102,7 @@ public class SandLab {
       int xCord = randomWidth;
 
       Random waterpick = new Random();
-      int wp = waterpick.nextInt(5);
+      int wp = waterpick.nextInt(3);
 
       //int cord = grid[xCord][yCord];
       // Learned that it's a bad idea to use this ^
@@ -115,45 +115,35 @@ public class SandLab {
               }
               break;
          case WATER:
-             switch (wp){
-                 case 0: // LEFT
-                     if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
 
-                         grid[yCord][xCord] = EMPTY;
-                         grid[yCord][xCord - 1] = WATER;
-                     }
-                     else{
-                        break;
-                     }
-                     break;
-                 case 1: // RIGHT
-                     if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
+             if((grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL)){
+                 switch (wp) {
+                     case 0: // LEFT
 
-                         grid[yCord][xCord] = EMPTY;
-                         grid[yCord][xCord + 1] = WATER;
-                     }
-                     else{
-                         break;
-                     }
-                     break;
-
-                 case 2: // DOWN
-                     if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
-
-                         if (grid[yCord + 1][xCord] == WATER){
-                             grid[yCord][xCord] = WATER;
-                             grid[yCord + 1][xCord] = WATER;
+                         if (grid[yCord][xCord - 1] != WATER){
+                             grid[yCord][xCord] = EMPTY;
+                             grid[yCord][xCord - 1] = WATER;
                          }
-                         else{
+
+                         break;
+                     case 1: // RIGHT
+
+                         if (grid[yCord][xCord + 1] != WATER){
+                             grid[yCord][xCord] = EMPTY;
+                             grid[yCord][xCord + 1] = WATER;
+                         }
+
+                         break;
+
+                     case 2: // DOWN
+
+                         if (grid[yCord + 1][xCord] != WATER){
                              grid[yCord][xCord] = EMPTY;
                              grid[yCord + 1][xCord] = WATER;
                          }
-                     }
-                     else{
-                         break;
-                     }
-                     break;
 
+                         break;
+                 }
              }
       }
       // notes for water
