@@ -101,6 +101,9 @@ public class SandLab {
       int yCord = randomHeight;
       int xCord = randomWidth;
 
+      Random waterpick = new Random();
+      int wp = waterpick.nextInt(5);
+
       //int cord = grid[xCord][yCord];
       // Learned that it's a bad idea to use this ^
 
@@ -110,7 +113,37 @@ public class SandLab {
                   grid[yCord][xCord] = EMPTY;
                   grid[yCord + 1][xCord] = SAND;
               }
+              break;
+         case WATER:
+             switch (wp){
+                 case 0:
+                     if (grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL){
+
+                         if (true){
+                             grid[yCord][xCord] = WATER;
+                             grid[yCord + 1][xCord] = WATER;
+                         }
+
+                         grid[yCord][xCord] = EMPTY;
+                         grid[yCord][xCord - 1] = WATER;
+                     }
+                     else{
+                        break;
+                     }
+                     break;
+
+             }
       }
+      // notes for water
+      /*
+
+      1: LEFT = [yCord][xCord - 1]
+      2: RIGHT = [yCord][xCord + 1]
+      3: DOWN = [yCord + 1][xCord]
+
+       */
+
+
       // SOmething also to note is that these indexes start from the TOP LEFT i'm pretty sure, that's why I'm adding 1 to the y-cord
 
       // NOTE TO SELF: THE Y COORDINATE COMES FIRST. SHould have paid more attention to the parameters at the top.
