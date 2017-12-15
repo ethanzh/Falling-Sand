@@ -56,7 +56,7 @@ public class SandLab {
               int tool = grid[i][j];
               // Gets position of current pointer (I don't know why I can't use tool from locationClicked, but this seems to work so oh well
 
-              System.out.println(tool);
+              //System.out.println(tool);
               // For testing purposes -- seems to always equal 0
 
               switch (tool) {
@@ -83,6 +83,41 @@ public class SandLab {
   //called repeatedly.
   //causes one random particle to maybe do something.
   public void step() {
+
+      // Goal: pick a random location in grid (which is a 2d array of 120 tall, 80 wide
+
+      Random height = new Random();
+      Random width = new Random();
+
+      int heightLowerBound = 1;
+      int widthLowerBoung = 1;
+
+      int heightUpperBound = 119;
+      int widthUpperBound = 79;
+
+      int randomHeight = height.nextInt(heightUpperBound - heightLowerBound) + heightLowerBound;
+      int randomWidth = width.nextInt(widthUpperBound - widthLowerBoung) + widthLowerBoung;
+
+      int yCord = randomHeight;
+      int xCord = randomWidth;
+
+      //int cord = grid[xCord][yCord];
+      // Learned that it's a bad idea to use this ^
+
+     switch (grid[yCord][xCord]){
+          case SAND:
+              if (grid[yCord + 1][xCord] == EMPTY){
+                  grid[yCord][xCord] = EMPTY;
+                  grid[yCord + 1][xCord] = SAND;
+              }
+      }
+
+      // NOTE TO SELF: THE Y COORDINATE COMES FIRST. SHould have paid more attention to the parameters at the top.
+      // it's not grid[x][y] it's grid[y][x]
+
+      //System.out.println(randomHeight + " . " + randomWidth);
+      // Works
+
   }
   
   //do not modify
