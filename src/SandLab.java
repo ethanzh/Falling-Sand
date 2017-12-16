@@ -164,6 +164,9 @@ public class SandLab {
       //System.out.println(randomHeight + " . " + randomWidth);
       // Works
 
+
+      // TODO: Add ice behavior. Ice should turn water into ice when it comes into contact with it.
+
   }
   
   //do not modify
