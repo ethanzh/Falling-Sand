@@ -119,16 +119,13 @@ public class SandDisplay extends JComponent implements MouseListener,
     mouseLoc = null;
   }
   
-  public void mouseEntered(MouseEvent e)
-  {
+  public void mouseEntered(MouseEvent e) {
   }
   
-  public void mouseExited(MouseEvent e)
-  {
+  public void mouseExited(MouseEvent e) {
   }
   
-  public void mouseMoved(MouseEvent e)
-  {
+  public void mouseMoved(MouseEvent e) {
   }
   
   public void mouseDragged(MouseEvent e)
