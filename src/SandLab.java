@@ -168,7 +168,8 @@ public class SandLab {
       // TODO: Add ice behavior. Ice should turn water into ice when it comes into contact with it.
 
   }
-  
+
+
   //do not modify
   public void run() {
     while (true)
