@@ -34,7 +34,6 @@ public class SandLab {
     System.out.println(grid[0].length);
     System.out.println(grid[1].length);
     // Tests just to see the lengths of grid's different attributes
-
   }
   
   //called when the user clicks on a location using the given tool
