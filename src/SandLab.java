@@ -74,7 +74,6 @@ public class SandLab {
                   case ICE:
                       display.setColor(i, j, Color.WHITE);
               }
-
           }
       }
   }
@@ -145,6 +144,7 @@ public class SandLab {
                  }
              }
       }
+
       // notes for water
       /*
 
