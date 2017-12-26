@@ -122,7 +122,6 @@ public class SandLab {
                              grid[yCord][xCord] = EMPTY;
                              grid[yCord][xCord - 1] = WATER;
                          }
-
                          break;
                      case 1: // RIGHT
 
@@ -130,7 +129,6 @@ public class SandLab {
                              grid[yCord][xCord] = EMPTY;
                              grid[yCord][xCord + 1] = WATER;
                          }
-
                          break;
 
                      case 2: // DOWN
@@ -139,7 +137,6 @@ public class SandLab {
                              grid[yCord][xCord] = EMPTY;
                              grid[yCord + 1][xCord] = WATER;
                          }
-
                          break;
                  }
              }
