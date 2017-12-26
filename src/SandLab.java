@@ -154,7 +154,6 @@ public class SandLab {
 
        */
 
-
       // SOmething also to note is that these indexes start from the TOP LEFT i'm pretty sure, that's why I'm adding 1 to the y-cord
 
       // NOTE TO SELF: THE Y COORDINATE COMES FIRST. SHould have paid more attention to the parameters at the top.
@@ -162,7 +161,6 @@ public class SandLab {
 
       //System.out.println(randomHeight + " . " + randomWidth);
       // Works
-
   }
   
   //do not modify
