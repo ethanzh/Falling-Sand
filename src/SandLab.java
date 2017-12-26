@@ -137,6 +137,7 @@ public class SandLab {
                              grid[yCord][xCord] = EMPTY;
                              grid[yCord + 1][xCord] = WATER;
                          }
+
                          break;
                  }
              }
