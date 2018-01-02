@@ -80,6 +80,7 @@ public class SandLab {
 
   //called repeatedly.
   //causes one random particle to maybe do something.
+
   public void step() {
 
       // Goal: pick a random location in grid (which is a 2d array of 120 tall, 80 wide
