@@ -107,11 +107,13 @@ public class SandLab {
 
      switch (grid[yCord][xCord]){
           case SAND:
+
               if (grid[yCord + 1][xCord] == EMPTY){
                   grid[yCord][xCord] = EMPTY;
                   grid[yCord + 1][xCord] = SAND;
               }
               break;
+
          case WATER:
 
              if((grid[yCord][xCord - 1] != METAL && grid[yCord + 1][xCord] != METAL && grid[yCord][xCord + 1] != METAL)){
