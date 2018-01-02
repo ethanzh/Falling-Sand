@@ -160,6 +160,7 @@ public class SandLab {
       //System.out.println(randomHeight + " . " + randomWidth);
       // Works
   }
+
   
   //do not modify
   public void run() {
